@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  database:
+    image: postgres:latest
+    container_name: search-in-github-database
+    environment:
+      - POSTGRES_USER=api
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=search-in-github
+    ports:
+      - "5432:5432"
